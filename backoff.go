@@ -28,14 +28,9 @@ import "time"
 
 // Config defines the configuration options for backoff.
 type Config struct {
-	// BaseDelay is the amount of time to backoff after the first failure.
 	BaseDelay time.Duration
-	// Multiplier is the factor with which to multiply backoffs after a
-	// failed retry. Should ideally be greater than 1.
 	Multiplier float64
-	// Jitter is the factor with which backoffs are randomized.
 	Jitter float64
-	// MaxDelay is the upper bound of backoff delay.
 	MaxDelay time.Duration
 }
 
